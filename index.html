@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>Simple Chat App</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+  <h3>Simple Chatting with Open AI!</h3>
+  {% if conversation %}
+      <div class="dialogbox">
+      {% for dialog in conversation %}
+        <div class="dialog">{{ dialog }}</div>
+      {% endfor %}
+      </div>
+  {% endif %}
+  <form action="/" method="post">
+    <input type="text" name="user_dialog" placeholder="Say Anything!" required />
+    <input type="submit" value="Send message to Chatbot" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
