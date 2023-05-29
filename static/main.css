@@ -64,13 +64,18 @@ input[type="submit"] {
   font-weight: bold;
   margin-top: 40px;
 }
-.dialogbox {
-  overflow: scroll;
+.dialog-container {
+  overflow: auto;
   max-height: 60vh;
 }
 .dialog {
-  padding: 1rem;
+  margin: 1rem;
+  padding: .5rem;
   text-align: left;
-  border: 2px solid;
-  border-radius: 10%;
+  box-shadow: #202123 3px 3px 10px;
+  background-color: ghostwhite;
+  border-radius: 5%;
+}
+.dialog:nth-of-type(even) {
+  text-align: right;
 }
