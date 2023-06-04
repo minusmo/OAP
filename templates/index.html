@@ -18,7 +18,7 @@
     </div>
   <h3 class="flex-auto font-sans text-2xl text-pink-400/75 font-bold">Simple Chatting with Open AI!</h3>
 </div>
-      <div class="p-4 row-span-6 flex flex-col justify-start overflow-auto bg-rose-200 outline max-w-lg min-h-full">
+      <div class="border-4 border-stone-200 divide-y-4 divide-slate-400/25 rounded-sm p-4 row-span-6 flex flex-col justify-start overflow-auto bg-rose-200/30 min-w-fit max-w-2xl min-h-full">
       {% for dialog in conversation %}
         <div class="p-2 font-serif even:self-end">{{ dialog }}</div>
       {% endfor %}
@@ -29,7 +29,7 @@
           class="row-span-2 grid grid-rows-2 justify-evenly items-center gap-4"
   >
     <input class="p-2 rounded-md outline outline-4 outline-cyan-500 focus:caret-blue-500 shadow-inner" type="text" name="user_dialog" placeholder="Say Anything!" required />
-    <input class="cursor-pointer p-2 rounded-md outline outline-4 outline-pink-600 ring-blue-500/50" type="submit" value="Send message to Chatbot" />
+    <input class="cursor-pointer bg-cyan-500 shadow-md shadow-cyan-500/50 p-4 rounded-md " type="submit" value="Send message to Chatbot" />
   </form>
 </div>
 </body>
